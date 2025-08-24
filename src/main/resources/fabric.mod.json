@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "fastswitcher",
+	"version": "${version}",
+	"name": "FastSwitcher",
+	"description": "This Mod Helps you all Exploit the bug in the game when the enchants apply from the 1st tool you hold in your hand to the 2nd item when you switch within the same tick of using the tools",
+	"authors": [
+		"Redbeastsam",
+        "https://youtube.com/@Redbeastsam"
+	],
+	"contact": {
+		"homepage": "example@gmail.com",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/fastswitcher/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.redbeastsam.fastswitcher.FastSwitcher"
+		],
+		"fabric-datagen": [
+            "net.redbeastsam.fastswitcher.FastSwitcherDataGenerator"
+		],
+        "client": [
+            "net.redbeastsam.fastswitcher.FastSwitcherClient"
+        ]
+	},
+	"mixins": [
+		"fastswitcher.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
